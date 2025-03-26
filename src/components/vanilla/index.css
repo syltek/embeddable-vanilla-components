@@ -1,0 +1,171 @@
+/* Tailwind Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep MacOs from making web fonts look weirdly bolded */
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Handle some z-indexing issues */
+:host(.on-top) {
+  z-index: 1;
+}
+
+/* Every component has an inside-card class */
+:host(.inside-card) {
+  box-shadow: var(--embeddable-container-boxShadow);
+  border-radius: var(--embeddable-container-borderRadius);
+  padding: var(--embeddable-container-padding) !important;
+  border: var(--embeddable-container-border);
+}
+
+/* Day Picker */
+.rdp-root {
+  --rdp-accent-background-color: #f3f4f6 !important;
+  --rdp-accent-color: #7d899b !important;
+  --rdp-day_button-border-radius: 0px 4px 4px 0px !important;
+  --rdp-outside-opacity: 0.4 !important;
+  --rdp-range_end-background: #f3f4f6 !important;
+  --rdp-range_end-color: #fff !important;
+  --rdp-range_end-date-background-color: #7d899b !important;
+  --rdp-range_middle-background-color: #f3f4f6 !important;
+  --rdp-range_middle-foreground-color: #7d899b !important;
+  --rdp-range_start-background: #f3f4f6 !important;
+  --rdp-range_start-color: #fff !important;
+  --rdp-range_start-date-background-color: #7d899b !important;
+  --rdp-today-color: #111111 !important;
+  --rdp-week_number-border-radius: 4px !important;
+}
+.rdp-root .rdp-today:not(.rdp-outside) {
+  font-weight: 700 !important;
+}
+.rdp-day_selected,
+.rdp-day_selected:focus-visible,
+.rdp-day_selected:hover {
+  color: var(--rdp-selected-color) !important;
+  opacity: 1 !important;
+  background-color: var(--rdp-accent-color) !important;
+}
+.rdp .rdp-tbody {
+  --rdp-accent-color: #f3f4f6 !important;
+}
+.rdp .rdp-tbody .rdp-day_range_start,
+.rdp .rdp-tbody .rdp-day_range_end {
+  --rdp-accent-color: #7d899b !important;
+  border-radius: 4px !important;
+  --rdp-selected-color: white !important;
+}
+.rdp-root .rdp-range_start .rdp-day_button {
+  border-radius: 4px 0px 0px 4px !important;
+}
+.rdp .rdp-tbody {
+  --rdp-selected-color: #7d899b !important;
+}
+
+/* Spinner */
+.spinner {
+  -webkit-animation: spin 500ms ease-in-out infinite;
+  -moz-animation: spin 500ms ease-in-out infinite;
+  animation: spin 500ms ease-in-out infinite;
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.skeleton-box::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+  content: '';
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Handle Text Overflow Cases */
+.text-overflow-dynamic-container {
+  position: relative;
+  max-width: 100%;
+  padding: 0 !important;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  vertical-align: text-bottom !important;
+}
+.text-overflow-dynamic-ellipsis {
+  position: absolute;
+  white-space: nowrap;
+  overflow-y: visible;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.text-overflow-dynamic-container:after,
+.text-overflow-dynamic-ellipsis:after {
+  content: '-';
+  display: inline;
+  visibility: hidden;
+  width: 0;
+}
+
+/* Multi-Selects */
+.multiSelectContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.multiselectItem {
+  margin-left: 4px;
+  background: #f1f1f1;
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+  margin: 0px 4px 4px 0px;
+  justify-content: center;
+}
+.multiSelectInner {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Input Placeholder */
+input::placeholder,
+[placeholder] {
+  text-overflow: ellipsis;
+  padding-right: 1.5rem;
+}
+
+/* Theme Related CSS Values */
+.font-embeddable {
+  color: var(--embeddable-font-color);
+  font-family: var(--embeddable-font-family);
+}
+.embeddable-table-header {
+  color: var(--embeddable-table-header-color);
+}

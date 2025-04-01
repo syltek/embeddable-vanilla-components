@@ -8,6 +8,9 @@
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "embeddable:build": "embeddable build",
     "embeddable:package": "embeddable buildPackage",

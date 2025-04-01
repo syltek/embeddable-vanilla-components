@@ -1,5 +1,11 @@
 # @embeddable.com/vanilla-components
 
+## 0.0.6
+
+### Patch Changes
+
+- db94b65: First release after github action fixed
+
 ## 0.0.5
 
 ### Patch Changes

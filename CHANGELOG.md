@@ -1,5 +1,11 @@
 # @embeddable.com/vanilla-components
 
+## 0.0.4
+
+### Patch Changes
+
+- 46dada5: Update github action
+
 ## 0.0.3
 
 ### Patch Changes

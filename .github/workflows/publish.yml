@@ -22,7 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and publish
-        run: npm run release
+      - name: Create Release Pull Request or Publish to npm
+        uses: changesets/action@v1
+        with:
+          publish: npm run release
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

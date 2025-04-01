@@ -1,5 +1,11 @@
 # @embeddable.com/vanilla-components
 
+## 0.0.5
+
+### Patch Changes
+
+- c036ba0: Make the package public
+
 ## 0.0.4
 
 ### Patch Changes

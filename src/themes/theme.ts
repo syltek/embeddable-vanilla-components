@@ -153,9 +153,6 @@ export type Theme = {
     family: string;
     size: string;
     weight: number;
-    imports: {
-      [key: string]: string;
-    };
   };
   png: {
     backgroundColor: string;

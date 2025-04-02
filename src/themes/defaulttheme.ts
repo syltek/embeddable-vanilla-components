@@ -145,9 +145,6 @@ export const defaultTheme: Theme = {
       '-apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     size: `14px`,
     weight: 400,
-    imports: {
-      // eg: 'Impact': 'impact',
-    },
   },
   png: {
     backgroundColor: '#FFFFFF',

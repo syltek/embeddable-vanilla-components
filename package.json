@@ -1,6 +1,6 @@
 {
   "name": "@embeddable.com/vanilla-components",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,9 @@
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "embeddable:build": "embeddable build",
     "embeddable:package": "embeddable buildPackage",

@@ -3,7 +3,6 @@ import React, { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { useTheme } from '@embeddable.com/react';
 
-import useFont from '../hooks/useFont';
 import useResize, { Size } from '../hooks/useResize';
 import Description from './Description';
 import DownloadMenu from './DownloadMenu';
@@ -83,8 +82,6 @@ export default ({
       }
     : props.results || {};
   const noData = !isLoading && !data?.length;
-
-  useFont();
 
   return (
     <>

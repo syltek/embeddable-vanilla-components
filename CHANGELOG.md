@@ -1,5 +1,11 @@
 # @embeddable.com/vanilla-components
 
+## 0.0.8
+
+### Patch Changes
+
+- b96fa42: Trying to fix audit issues in boilerplate
+
 ## 0.0.7
 
 ### Patch Changes

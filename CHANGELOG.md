@@ -1,5 +1,11 @@
 # @embeddable.com/vanilla-components
 
+## 0.0.7
+
+### Patch Changes
+
+- eb48e85: Slight tweak to fonts
+
 ## 0.0.6
 
 ### Patch Changes

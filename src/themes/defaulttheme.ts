@@ -1,8 +1,6 @@
-import { descriptors } from 'chart.js/dist/core/core.defaults';
 import { Theme } from './theme';
 
 export const defaultTheme: Theme = {
-  isParent: true, // Do not modify this!
   brand: {
     primary: '#6778DE',
     secondary: '#FF997C',

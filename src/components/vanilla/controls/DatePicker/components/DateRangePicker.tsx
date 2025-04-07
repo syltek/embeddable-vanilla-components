@@ -153,6 +153,7 @@ export default function DateRangePicker(props: Props) {
             border-y
             cursor-pointer
             flex
+            font-embeddable
             grow
             items-center
             min-w-[60px]
@@ -195,12 +196,11 @@ export default function DateRangePicker(props: Props) {
                 bg-[color:--embeddable-controls-backgrounds-colors-soft]
                 border-[color:--embeddable-controls-borders-colors-normal]
                 rounded-[--embeddable-controls-borders-radius]
-                text-[color:--embeddable-font-colorNormal]
               `}
               classNames={{
                 selected: `
                   bg-[color:--embeddable-controls-inputs-colors-selected]
-                  text-[color:--embeddable-font-colorNormal]`,
+                  `,
               }}
               components={{
                 MonthCaption: CustomCaption,

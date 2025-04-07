@@ -126,6 +126,33 @@ export type Theme = {
       padding: number;
       radius: string;
     };
+    datepicker: {
+      backgrounds: {
+        colors: {
+          accent: string;
+          rangeEnd: string;
+          rangeEndDate: string;
+          rangeMiddle: string;
+          rangeStart: string;
+        };
+      };
+      font: {
+        colors: {
+          accent: string;
+          rangeEnd: string;
+          rangeMiddle: string;
+          rangeStart: string;
+          rangeStartDate: string;
+          today: string;
+        };
+      };
+      outsideOpacity: number;
+      radiuses: {
+        buttonEnd: string;
+        buttonStart: string;
+        weekNumber: string;
+      };
+    };
     inputs: {
       colors: {
         hover: string;

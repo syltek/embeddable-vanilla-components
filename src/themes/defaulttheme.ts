@@ -116,6 +116,33 @@ export const defaultTheme: Theme = {
       padding: 8,
       radius: '12px',
     },
+    datepicker: {
+      backgrounds: {
+        colors: {
+          accent: '#f3f4f6',
+          rangeEnd: '#7d899b',
+          rangeEndDate: '#7d899b',
+          rangeMiddle: '#f3f4f6',
+          rangeStart: '#7d899b',
+        },
+      },
+      font: {
+        colors: {
+          accent: '#7d899b',
+          rangeEnd: '#ffffff',
+          rangeMiddle: '#7d899b',
+          rangeStart: '#ffffff',
+          rangeStartDate: '#7d899b',
+          today: '#111111',
+        },
+      },
+      outsideOpacity: 0.4,
+      radiuses: {
+        buttonEnd: '0px 4px 4px 0px',
+        buttonStart: '4px 0px 0px 4px',
+        weekNumber: '4px',
+      },
+    },
     inputs: {
       colors: {
         hover: '#F3F4F6',
@@ -137,7 +164,7 @@ export const defaultTheme: Theme = {
     second: 'HH:mm:ss',
   },
   font: {
-    color: '#888',
+    color: '#888888',
     colorNormal: '#333942',
     colorSoft: '#e3e3e3',
     family:

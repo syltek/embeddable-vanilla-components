@@ -32,67 +32,6 @@
 }
 
 /* Day Picker */
-/*
-.rdp-root {
-  --rdp-accent-background-color: var(
-    --embeddable-controls-datepicker-backgrounds-colors-accent
-  ) !important;
-  --rdp-accent-color: var(--embeddable-controls-datepicker-fonts-colors-accent) !important;
-  --rdp-day_button-border-radius: var(--embeddable-controls-datepicker-radiuses-button) !important;
-  --rdp-outside-opacity: var(--embeddable-controls-datepicker-outsideOpacity) !important;
-  --rdp-range_end-background: var(
-    --embeddable-controls-datepicker-backgrounds-colors-rangeEnd
-  ) !important;
-  --rdp-range_end-color: var(--embeddable-controls-datepicker-fonts-colors-rangeEnd) !important;
-  --rdp-range_end-date-background-color: var(
-    --embeddable-controls-datepicker-backgrounds-colors-rangeEndDate
-  ) !important;
-  --rdp-range_middle-background-color: var(
-    --embeddable-controls-datepicker-backgrounds-colors-rangeMiddle
-  ) !important;
-  --rdp-range_middle-foreground-color: var(
-    --embeddable-controls-datepicker-fonts-colors-rangeMiddle
-  ) !important;
-  --rdp-range_start-background: var(
-    --embeddable-controls-datepicker-backgrounds-colors-rangeStart
-  ) !important;
-  --rdp-range_start-color: var(--embeddable-controls-datepicker-fonts-colors-rangeStart) !important;
-  --rdp-range_start-date-background-color: var(
-    --embeddable-controls-datepicker-backgrounds-colors-rangeStartDate
-  ) !important;
-  --rdp-today-color: var(--embeddable-controls-datepicker-fonts-colors-today) !important;
-  --rdp-week_number-border-radius: var(
-    --embeddable-controls-datepicker-radiuses-weekNumber
-  ) !important;
-}
-
-.rdp-root .rdp-today:not(.rdp-outside) {
-  font-weight: 700 !important;
-}
-.rdp-day_selected,
-.rdp-day_selected:focus-visible,
-.rdp-day_selected:hover {
-  color: var(--rdp-selected-color) !important;
-  opacity: 1 !important;
-  background-color: var(--rdp-accent-color) !important;
-}
-.rdp .rdp-tbody {
-  --rdp-accent-color: #f3f4f6 !important;
-}
-.rdp .rdp-tbody .rdp-day_range_start,
-.rdp .rdp-tbody .rdp-day_range_end {
-  --rdp-accent-color: #7d899b !important;
-  border-radius: var(--embeddable-controls-datepicker-radiuses-button) !important;
-  --rdp-selected-color: var(--embeddable-controls-datepicker-fonts-colors-rangeEnd) !important;
-}
-.rdp-root .rdp-range_start .rdp-day_button {
-  border-radius: 4px 0px 0px 4px !important;
-}
-.rdp .rdp-tbody {
-  --rdp-selected-color: #7d899b !important;
-}
-*/
-
 .rdp-day_button {
   border-radius: var(--embeddable-controls-datepicker-radiuses-button) !important;
 }

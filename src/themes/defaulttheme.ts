@@ -71,10 +71,11 @@ export const defaultTheme: Theme = {
     /* End custom chart overrides */
   },
   container: {
-    boxShadow: 'none',
-    borderRadius: '12px',
-    padding: '15px',
+    backgroundColor: 'transparent',
     border: '1px solid #ddd',
+    borderRadius: '12px',
+    boxShadow: 'none',
+    padding: '15px',
   },
   controls: {
     backgrounds: {

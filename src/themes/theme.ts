@@ -14,7 +14,6 @@ type BarChartBorderRadius = {
 };
 
 export type Theme = {
-  isParent: boolean;
   brand: {
     primary: string;
     secondary: string;
@@ -94,10 +93,11 @@ export type Theme = {
     };
   };
   container: {
-    boxShadow: string;
-    borderRadius: string;
-    padding: string;
+    backgroundColor: string;
     border: string;
+    borderRadius: string;
+    boxShadow: string;
+    padding: string;
   };
   controls: {
     backgrounds: {

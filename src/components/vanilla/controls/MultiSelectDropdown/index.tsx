@@ -202,7 +202,7 @@ export default (props: Props) => {
               top-11
               w-full
               z-50
-              bg-[color:--embeddable-controls-backgrounds-soft]
+              bg-[color:--embeddable-controls-backgrounds-colors-soft]
               border-[color:--embeddable-controls-borders-colors-normal]
               rounded-[--embeddable-controls-borders-radius]
             `}

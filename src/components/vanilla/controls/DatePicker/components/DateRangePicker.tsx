@@ -192,7 +192,7 @@ export default function DateRangePicker(props: Props) {
                 px-4
                 py-3
                 !m-0
-                bg-[color:--embeddable-controls-backgrounds-soft]
+                bg-[color:--embeddable-controls-backgrounds-colors-soft]
                 border-[color:--embeddable-controls-borders-colors-normal]
                 rounded-[--embeddable-controls-borders-radius]
                 text-[color:--embeddable-font-colorNormal]
@@ -245,7 +245,7 @@ const CustomCaption = (props: MonthCaptionProps) => {
           items-center
           justify-center
           w-7
-          bg-[color:--embeddable-controls-backgrounds-soft]
+          bg-[color:--embeddable-controls-backgrounds-colors-soft]
           border-[color:--embeddable-controls-borders-colors-heavy]
           rounded-[--embeddable-controls-borders-radius]
         `}
@@ -265,7 +265,7 @@ const CustomCaption = (props: MonthCaptionProps) => {
           items-center
           justify-center
           w-7
-          bg-[color:--embeddable-controls-backgrounds-soft]
+          bg-[color:--embeddable-controls-backgrounds-colors-soft]
           border-[color:--embeddable-controls-borders-colors-heavy]
           rounded-[--embeddable-controls-borders-radius]
         `}

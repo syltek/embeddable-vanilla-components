@@ -167,7 +167,7 @@ const DownloadMenu: React.FC<Props> = (props) => {
                 top-6
                 w-40
                 whitespace-nowrap
-                bg-[color:--embeddable-controls-backgrounds-soft]
+                bg-[color:--embeddable-controls-backgrounds-colors-soft]
               `}
               >
                 <ul>

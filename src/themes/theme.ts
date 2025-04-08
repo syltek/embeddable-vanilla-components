@@ -14,7 +14,6 @@ type BarChartBorderRadius = {
 };
 
 export type Theme = {
-  isParent: boolean;
   brand: {
     primary: string;
     secondary: string;
@@ -94,10 +93,11 @@ export type Theme = {
     };
   };
   container: {
-    boxShadow: string;
-    borderRadius: string;
-    padding: string;
+    backgroundColor: string;
     border: string;
+    borderRadius: string;
+    boxShadow: string;
+    padding: string;
   };
   controls: {
     backgrounds: {
@@ -125,6 +125,33 @@ export type Theme = {
       };
       padding: number;
       radius: string;
+    };
+    datepicker: {
+      backgrounds: {
+        colors: {
+          accent: string;
+          rangeEnd: string;
+          rangeEndDate: string;
+          rangeMiddle: string;
+          rangeStart: string;
+        };
+      };
+      font: {
+        colors: {
+          accent: string;
+          rangeEnd: string;
+          rangeMiddle: string;
+          rangeStart: string;
+          rangeStartDate: string;
+          today: string;
+        };
+      };
+      outsideOpacity: number;
+      radiuses: {
+        buttonEnd: string;
+        buttonStart: string;
+        weekNumber: string;
+      };
     };
     inputs: {
       colors: {

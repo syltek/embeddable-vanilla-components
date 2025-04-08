@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme Related CSS Values */
+.font-embeddable {
+  color: var(--embeddable-font-color);
+  font-family: var(--embeddable-font-family);
+}
+.embeddable-table-header {
+  color: var(--embeddable-table-header-color);
+}
+
 /* Keep MacOs from making web fonts look weirdly bolded */
 * {
   -webkit-font-smoothing: antialiased;
@@ -19,49 +28,61 @@
   border-radius: var(--embeddable-container-borderRadius);
   padding: var(--embeddable-container-padding) !important;
   border: var(--embeddable-container-border);
+  background-color: var(--embeddable-container-backgroundColor);
 }
 
 /* Day Picker */
-.rdp-root {
-  --rdp-accent-background-color: #f3f4f6 !important;
-  --rdp-accent-color: #7d899b !important;
-  --rdp-day_button-border-radius: 0px 4px 4px 0px !important;
-  --rdp-outside-opacity: 0.4 !important;
-  --rdp-range_end-background: #f3f4f6 !important;
-  --rdp-range_end-color: #fff !important;
-  --rdp-range_end-date-background-color: #7d899b !important;
-  --rdp-range_middle-background-color: #f3f4f6 !important;
-  --rdp-range_middle-foreground-color: #7d899b !important;
-  --rdp-range_start-background: #f3f4f6 !important;
-  --rdp-range_start-color: #fff !important;
-  --rdp-range_start-date-background-color: #7d899b !important;
-  --rdp-today-color: #111111 !important;
-  --rdp-week_number-border-radius: 4px !important;
+.rdp-day_button {
+  border-radius: var(--embeddable-controls-datepicker-radiuses-button) !important;
 }
-.rdp-root .rdp-today:not(.rdp-outside) {
-  font-weight: 700 !important;
+
+.rdp-week_number {
+  border-radius: var(--embeddable-controls-datepicker-radiuses-weekNumber) !important;
 }
-.rdp-day_selected,
-.rdp-day_selected:focus-visible,
-.rdp-day_selected:hover {
-  color: var(--rdp-selected-color) !important;
-  opacity: 1 !important;
-  background-color: var(--rdp-accent-color) !important;
+
+/* DAY MODIFIERS */
+.rdp-today:not(.rdp-outside) {
+  color: var(--embeddable-controls-datepicker-font-colors-today) !important;
 }
-.rdp .rdp-tbody {
-  --rdp-accent-color: #f3f4f6 !important;
+
+.rdp-hidden {
+  visibility: hidden;
+  color: var(--embeddable-controls-datepicker-font-colors-rangeStart) !important;
 }
-.rdp .rdp-tbody .rdp-day_range_start,
-.rdp .rdp-tbody .rdp-day_range_end {
-  --rdp-accent-color: #7d899b !important;
-  border-radius: 4px !important;
-  --rdp-selected-color: white !important;
+
+.rdp-range_start {
+  background: var(--embeddable-controls-datepicker-backgrounds-colors-rangeStart) !important;
 }
-.rdp-root .rdp-range_start .rdp-day_button {
-  border-radius: 4px 0px 0px 4px !important;
+
+.rdp-range_start .rdp-day_button {
+  background-color: var(--embeddable-controls-datepicker-backgrounds-colors-rangeStart) !important;
+  color: var(--embeddable-controls-datepicker-font-colors-rangeStart) !important;
 }
-.rdp .rdp-tbody {
-  --rdp-selected-color: #7d899b !important;
+
+.rdp-range_middle {
+  background-color: var(--embeddable-controls-datepicker-backgrounds-colors-rangeMiddle) !important;
+}
+
+.rdp-range_middle .rdp-day_button {
+  color: var(--embeddable-controls-datepicker-font-colors-rangeMiddle) !important;
+}
+
+.rdp-range_end {
+  background: var(--embeddable-controls-datepicker-backgrounds-colors-rangeEnd) !important;
+  color: var(--embeddable-controls-datepicker-font-colors-rangeEnd) !important;
+}
+
+.rdp-range_end .rdp-day_button {
+  color: var(--embeddable-controls-datepicker-font-colors-rangeStart) !important;
+  background-color: var(--embeddable-controls-datepicker-backgrounds-colors-rangeEnd) !important;
+}
+
+.rdp-day.rdp-range_end {
+  border-radius: var(--embeddable-controls-datepicker-radiuses-buttonEnd) !important;
+}
+
+.rdp-day.rdp-range_start {
+  border-radius: var(--embeddable-controls-datepicker-radiuses-buttonStart) !important;
 }
 
 /* Spinner */
@@ -159,13 +180,4 @@ input::placeholder,
 [placeholder] {
   text-overflow: ellipsis;
   padding-right: 1.5rem;
-}
-
-/* Theme Related CSS Values */
-.font-embeddable {
-  color: var(--embeddable-font-color);
-  font-family: var(--embeddable-font-family);
-}
-.embeddable-table-header {
-  color: var(--embeddable-table-header-color);
 }

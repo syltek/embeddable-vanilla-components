@@ -153,6 +153,7 @@ export default function DateRangePicker(props: Props) {
             border-y
             cursor-pointer
             flex
+            font-embeddable
             grow
             items-center
             min-w-[60px]
@@ -161,7 +162,7 @@ export default function DateRangePicker(props: Props) {
             text-sm
             border-[color:--embeddable-controls-borders-colors-normal]
             hover:bg-[color:--embeddable-controls-inputs-colors-hover]
-            rounded-r-[--embedabble-controls-borders-radius]
+            rounded-r-[--embeddable-controls-borders-radius]
           `}
         >
           <input
@@ -192,15 +193,14 @@ export default function DateRangePicker(props: Props) {
                 px-4
                 py-3
                 !m-0
-                bg-[color:--embeddable-controls-backgrounds-soft]
+                bg-[color:--embeddable-controls-backgrounds-colors-soft]
                 border-[color:--embeddable-controls-borders-colors-normal]
                 rounded-[--embeddable-controls-borders-radius]
-                text-[color:--embeddable-font-colorNormal]
               `}
               classNames={{
                 selected: `
                   bg-[color:--embeddable-controls-inputs-colors-selected]
-                  text-[color:--embeddable-font-colorNormal]`,
+                  `,
               }}
               components={{
                 MonthCaption: CustomCaption,
@@ -245,7 +245,7 @@ const CustomCaption = (props: MonthCaptionProps) => {
           items-center
           justify-center
           w-7
-          bg-[color:--embeddable-controls-backgrounds-soft]
+          bg-[color:--embeddable-controls-backgrounds-colors-soft]
           border-[color:--embeddable-controls-borders-colors-heavy]
           rounded-[--embeddable-controls-borders-radius]
         `}
@@ -265,7 +265,7 @@ const CustomCaption = (props: MonthCaptionProps) => {
           items-center
           justify-center
           w-7
-          bg-[color:--embeddable-controls-backgrounds-soft]
+          bg-[color:--embeddable-controls-backgrounds-colors-soft]
           border-[color:--embeddable-controls-borders-colors-heavy]
           rounded-[--embeddable-controls-borders-radius]
         `}

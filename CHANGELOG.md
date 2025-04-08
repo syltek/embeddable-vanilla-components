@@ -1,5 +1,11 @@
 # @embeddable.com/vanilla-components
 
+## 1.0.0
+
+### Major Changes
+
+- 6b4f816: Release version - 1.0.0
+
 ## 0.0.8
 
 ### Patch Changes

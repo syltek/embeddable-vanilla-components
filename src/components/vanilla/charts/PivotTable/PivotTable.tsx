@@ -114,7 +114,7 @@ const PivotTable = <T,>({
         sticky
         top-0
         z-20
-        bg-[color:--embeddable-controls-backgrounds-soft]
+        bg-[color:--embeddable-controls-backgrounds-colors-soft]
       `}
       >
         <TableHead

@@ -34,7 +34,7 @@ const TableHead = ({ columns, sortBy, sortDirection, onSortingChange, minColumnW
                 cursor-pointer
                 p-3
                 select-none
-                bg-[color:--embeddable-controls-backgrounds-soft]
+                bg-[color:--embeddable-controls-backgrounds-colors-soft]
               `}
               style={
                 minColumnWidth

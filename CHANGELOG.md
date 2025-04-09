@@ -1,5 +1,11 @@
 # @embeddable.com/vanilla-components
 
+## 1.0.1
+
+### Patch Changes
+
+- a15d774: Improves README
+
 ## 1.0.0
 
 ### Major Changes

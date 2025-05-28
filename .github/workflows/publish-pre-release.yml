@@ -1,0 +1,62 @@
+name: Publish pre-release
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  publish-package:
+    name: Publish package
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package version
+        id: pkg
+        run: |
+          export PREID='${{ github.event_name == 'pull_request' && 'pr' || 'rc' }}'
+          export PREID_NUMBER_PR='${{ github.event.pull_request.number }}.${{ github.run_id }}'
+          export PREID_NUMBER_RC='${{ github.run_id }}'
+          export PREID_NUMBER="${{ github.event_name == 'pull_request' && '$PREID_NUMBER_PR' || '$PREID_NUMBER_RC' }}"
+          export CURRENT_VERSION=$(cat package.json | jq -r .version)
+          export VERSION="$CURRENT_VERSION-${PREID}.${PREID_NUMBER}"
+          export PACKAGE_NAME="$(cat package.json | jq -r .name)"
+          echo "name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Publishing for version $VERSION"
+
+      - name: Bump package.json version
+        run: |
+          git config --global user.email "${{github.actor}}"
+          git config --global user.name "${{github.actor_id}}+${{github.actor}}@users.noreply.github.com"
+          npm version ${{ steps.pkg.outputs.version }}
+
+      - name: Build
+        run: npm run embeddable:package
+
+      - name: Publish
+        run: |
+          npm config set '//npm.pkg.github.com/:_authToken=${{ github.token }}'
+          npm publish
+          echo 'Install via npm:' >> $GITHUB_STEP_SUMMARY
+          echo '<pre><code>npm install --save-exact ${{ steps.pkg.outputs.name }}@${{ steps.pkg.outputs.version }}</code></pre>' >> $GITHUB_STEP_SUMMARY
+          echo 'Install via yarn classic:' >> $GITHUB_STEP_SUMMARY
+          echo '<pre><code>yarn add --exact ${{ steps.pkg.outputs.name }}@${{ steps.pkg.outputs.version }}</code></pre>' >> $GITHUB_STEP_SUMMARY
+          echo 'Install via package.json:' >> $GITHUB_STEP_SUMMARY
+          echo '<pre><code>"${{ steps.pkg.outputs.name }}": "${{ steps.pkg.outputs.version }}"</code></pre>' >> $GITHUB_STEP_SUMMARY

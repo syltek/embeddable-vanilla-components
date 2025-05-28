@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This is a fork of [emebeddable's vanilla components](https://github.com/embeddable-hq/vanilla-components-v1) check the [/docs](./docs) for more information.
+
 # Embeddable.com Starter Pack
 
 Hello and welcome to our Embeddable components **starter pack** built just for you by the Embeddable team ❤️ We wish to thank you for using our platform and welcome any feedback.

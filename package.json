@@ -1,5 +1,5 @@
 {
-  "name": "@embeddable.com/vanilla-components",
+  "name": "@syltek/embeddable-vanilla-components",
   "version": "1.0.8",
   "type": "module",
   "main": "dist/index.js",
@@ -8,8 +8,10 @@
     "dist",
     "README.md"
   ],
+  "repository": "https://github.com/syltek/embeddable-vanilla-components",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "embeddable:build": "embeddable build",

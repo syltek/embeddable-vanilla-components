@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "@syltek/embeddable-vanilla-components": "1.0.7"
+  },
+  "changesets": []
+}

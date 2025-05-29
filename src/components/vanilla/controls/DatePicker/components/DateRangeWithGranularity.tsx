@@ -124,7 +124,7 @@ export default function DateRangeWithGranularity(props: Props) {
               text-[color:--embeddable-font-colorNormal]
             `}
           >
-            compare to dateRangePicker
+            compare to 
           </div>
           <div className="grow basis-0 max-w-[150px] h-full ml-2">
             <Dropdown

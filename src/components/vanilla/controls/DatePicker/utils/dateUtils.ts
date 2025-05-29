@@ -37,6 +37,10 @@ export function getComparisonOptions(period: TimeRange) {
       note: getNote(subDays(period.from, days), subDays(period.to, days)),
     },
     {
+      value: 'Previous week',
+      note: getNote(subDays(period.from, 7), subDays(period.to, 7)),
+    },
+    {
       value: 'Previous month',
       note: getNote(subMonths(period.from, 1), subMonths(period.to, 1)),
     },
@@ -59,7 +63,13 @@ export function getComparisonPeriod(rts: string, period: TimeRange) {
       to: new Date(),
     };
   }
-  if (rts === 'Previous month') {
+  if (rts === 'Previous week') {
+    return {
+      relativeTimeString: 'previous week',
+      from: subDays(period.from, 7),
+      to: subDays(period.to, 7),
+    };
+  } else if (rts === 'Previous month') {
     return {
       relativeTimeString: 'previous month',
       from: subMonths(period.from, 1),
@@ -114,9 +124,10 @@ export function getValidGranularities(period?: TimeRange): GranularityResponse {
 
   //period boundaries for valid granularity options
   const gSettings: { [key: string]: { min: number; max: number } } = {
-    second: { min: 2, max: 100 },
-    minute: { min: toSeconds('minute', 2), max: toSeconds('minute', 100) },
-    hour: { min: toSeconds('hour', 2), max: toSeconds('hour', 100) },
+    // disabled for now because it's not used
+    // second: { min: 2, max: 100 },
+    // minute: { min: toSeconds('minute', 2), max: toSeconds('minute', 100) },
+    // hour: { min: toSeconds('hour', 2), max: toSeconds('hour', 100) },
     day: { min: toSeconds('day', 0.5), max: toSeconds('day', 168) },
     week: { min: toSeconds('week', 2), max: toSeconds('week', 365) },
     month: { min: toSeconds('month', 2), max: toSeconds('month', 730) },

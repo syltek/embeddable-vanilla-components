@@ -204,15 +204,16 @@ export default defineComponent(Component, meta, {
         limit: !inputs.prevTimeFilter ? 1 : 500,
         orderBy: orderProp,
         measures: inputs.metrics,
-        filters:
-          inputs.prevTimeFilter && inputs.xAxis
+        filters: 
+          // inputs.prevTimeFilter && inputs.xAxis
+          inputs.prevTimeFilter && inputs.xAxis && inputs.prevTimeFilter.from && inputs.prevTimeFilter.to
             ? [
                 {
                   property: inputs.xAxis,
                   operator: 'inDateRange',
                   value: {
                     from: inputs.prevTimeFilter.from,
-                    relativeTimeString: inputs.prevTimeFilter.relativeTimeString || 'previous period',
+                    relativeTimeString: '',
                     to: inputs.prevTimeFilter.to,
                   },
                 },

@@ -124,10 +124,9 @@ export function getValidGranularities(period?: TimeRange): GranularityResponse {
 
   //period boundaries for valid granularity options
   const gSettings: { [key: string]: { min: number; max: number } } = {
-    // disabled for now because it's not used
-    // second: { min: 2, max: 100 },
-    // minute: { min: toSeconds('minute', 2), max: toSeconds('minute', 100) },
-    // hour: { min: toSeconds('hour', 2), max: toSeconds('hour', 100) },
+    second: { min: 2, max: 100 },
+    minute: { min: toSeconds('minute', 2), max: toSeconds('minute', 100) },
+    hour: { min: toSeconds('hour', 2), max: toSeconds('hour', 100) },
     day: { min: toSeconds('day', 0.5), max: toSeconds('day', 168) },
     week: { min: toSeconds('week', 2), max: toSeconds('week', 365) },
     month: { min: toSeconds('month', 2), max: toSeconds('month', 730) },

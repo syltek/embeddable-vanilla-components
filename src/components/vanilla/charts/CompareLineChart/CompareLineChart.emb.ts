@@ -205,17 +205,12 @@ export default defineComponent(Component, meta, {
         orderBy: orderProp,
         measures: inputs.metrics,
         filters: 
-          // inputs.prevTimeFilter && inputs.xAxis
           inputs.prevTimeFilter && inputs.xAxis && inputs.prevTimeFilter.from && inputs.prevTimeFilter.to
             ? [
                 {
                   property: inputs.xAxis,
                   operator: 'inDateRange',
-                  value: {
-                    from: inputs.prevTimeFilter.from,
-                    relativeTimeString: '',
-                    to: inputs.prevTimeFilter.to,
-                  },
+                  value: inputs.prevTimeFilter,
                 },
               ]
             : undefined,

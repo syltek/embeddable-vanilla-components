@@ -212,7 +212,7 @@ export default defineComponent(Component, meta, {
                   operator: 'inDateRange',
                   value: {
                     from: inputs.prevTimeFilter.from,
-                    relativeTimeString: '',
+                    relativeTimeString: inputs.prevTimeFilter.relativeTimeString || 'previous period',
                     to: inputs.prevTimeFilter.to,
                   },
                 },
